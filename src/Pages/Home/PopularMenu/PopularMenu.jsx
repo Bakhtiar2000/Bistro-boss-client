@@ -26,6 +26,9 @@ const PopularMenu = () => {
                     ></MenuItem>)
                 }
             </div>
+            <div className="mt-4 flex justify-center items-center">
+            <button className="btn btn-outline border-0 border-b-4">Order Now</button>
+            </div>
         </section>
     );
 };
