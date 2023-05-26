@@ -19,7 +19,7 @@ const Menu = () => {
     const pizza = menu.filter(item => item.category === 'pizza')
     const offered = menu.filter(item => item.category === 'offered')
     return (
-        <div>
+        <div className='mb-10'>
             <Helmet>
                 <title>Bistro Boss | Menu</title>
             </Helmet>
@@ -35,15 +35,15 @@ const Menu = () => {
             <MenuCategory items={offered}> </MenuCategory>
 
             {/* Desert menu items */}
-            <MenuCategory items={desserts} title='Dessert' img={dessertImage}
+            <MenuCategory items={desserts} title='dessert' img={dessertImage}
             ></MenuCategory>
 
             {/* Pizza menu items */}
-            <MenuCategory items={pizza} title='Pizza' img={pizzaImage}
+            <MenuCategory items={pizza} title='pizza' img={pizzaImage}
             ></MenuCategory>
 
             {/* Salad menu items */}
-            <MenuCategory items={salad} title='Salad' img={saladImage}
+            <MenuCategory items={salad} title='salad' img={saladImage}
             ></MenuCategory>
 
             {/* Pizza menu items */}
