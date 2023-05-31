@@ -8,10 +8,10 @@ import Order from "../Pages/Order/Order/Order";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import Secret from "../Pages/Shared/Secret/Secret";
-import PrivateRoute from "../Providers/PrivateRoute";
 import DashBoard from "../Layout/DashBoard";
 import MyCart from "../Dashboard/MyCart/MyCart";
 import AllUsers from "../Dashboard/AllUsers/AllUsers";
+import AdminRoute from "./AdminRoute";
 
 const router = createBrowserRouter([
   {
@@ -40,13 +40,13 @@ const router = createBrowserRouter([
       },
       {
         path: 'secret',
-        element: <PrivateRoute><Secret></Secret></PrivateRoute>
+        element: <AdminRoute><Secret></Secret></AdminRoute>
       }
     ]
   },
   {
     path: 'dashboard',
-    element: <PrivateRoute><DashBoard></DashBoard></PrivateRoute>,
+    element: <AdminRoute><DashBoard></DashBoard></AdminRoute>,
     children:[
       {
         path: 'myCart',

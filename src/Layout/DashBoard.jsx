@@ -3,12 +3,14 @@ import { FaBook, FaCalendarAlt, FaHome, FaShoppingCart, FaUsers, FaUtensils, FaW
 import { RiUserSettingsFill } from 'react-icons/Ri';
 import { AiOutlineMenu, AiFillShopping } from 'react-icons/ai';
 import useCart from "../hooks/useCart";
+import useAdmin from "../hooks/useAdmin";
 
 const DashBoard = () => {
     const [cart] = useCart()
 
     //TODO: Load data from the server to have dynamic isAdmin based on data
-    const isAdmin = true;
+    // const isAdmin = true;
+    const [isAdmin]= useAdmin()
     return (
         <div className="drawer drawer-mobile">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
