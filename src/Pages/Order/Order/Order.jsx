@@ -9,9 +9,7 @@ import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 const Order = () => {
-    <Helmet>
-        <title>Bistro Boss | Order Food</title>
-    </Helmet>
+
     const categories = ['salad', 'pizza', 'soup', 'dessert', 'drinks']
     const { category } = useParams()
     const initialIndex = categories.indexOf(category)
@@ -26,6 +24,9 @@ const Order = () => {
     const drinks = menu.filter(item => item.category === 'drinks')
     return (
         <div>
+            <Helmet>
+                <title>Bistro Boss | Order Food</title>
+            </Helmet>
             <Cover title='Order Food' img={orderCover}></Cover>
             <div className='my-20'>
                 <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
