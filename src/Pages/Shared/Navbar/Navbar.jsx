@@ -33,7 +33,7 @@ const Navbar = () => {
                         <span>{user?.displayName}</span>
                         <button onClick={handleLogOut} className="btn btn-ghost">Log out</button>
                     </> : <>
-                        <button onClick={handleLogOut} className="btn btn-ghost"><Link to='/login'>Login</Link></button>
+                        <button className="btn btn-ghost"><Link to='/login'>Login</Link></button>
                     </>
             }
         </>
