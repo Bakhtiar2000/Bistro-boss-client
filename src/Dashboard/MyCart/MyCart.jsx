@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const MyCart = () => {
     const [cart, refetch] = useCart()
-    const total = cart.reduce((sum, item) => item.price + sum, 0)
+    const total = cart.reduce((sum, item) => item.price + sum, 0).toFixed(2)
 
     const handleDelete = item => {
 
@@ -21,7 +21,7 @@ const MyCart = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/carts/${item._id}`, {
+                fetch(`https://bistro-boss-server-bakhtiar2000.vercel.app/carts/${item._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -41,7 +41,7 @@ const MyCart = () => {
     return (
         <div className="w-full">
             <Helmet>
-                <title>Bistro Boss | My Cart</title>
+                <title>Hungry Duck | My Cart</title>
             </Helmet>
             <div className="uppercase h-20 font-semibold flex justify-evenly items-center">
                 <h3 className="text-3xl">Total Items: {cart.length}</h3>

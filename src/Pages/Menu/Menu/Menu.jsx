@@ -21,7 +21,7 @@ const Menu = () => {
     return (
         <div className='mb-10'>
             <Helmet>
-                <title>Bistro Boss | Menu</title>
+                <title>Hungry Duck | Menu</title>
             </Helmet>
             <Cover img={menuImage} title='Our Menu'></Cover>
 

@@ -54,7 +54,7 @@ const Login = () => {
     return (
         <>
             <Helmet>
-                <title>Bistro Boss | Login</title>
+                <title>Hungry Duck | Login</title>
             </Helmet>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
@@ -86,8 +86,7 @@ const Login = () => {
                                 <input type="text" onBlur={handleValidateCaptcha} placeholder="Type the captcha above" name="captcha" className="input input-bordered" />
                             </div>
                             <div className="form-control mt-6">
-                                {/* ToDo: add disabled={disabled} */}
-                                <input  className="btn btn-primary" type="submit" value="Login" />
+                                <input  className="btn btn-primary" type="submit" disabled={disabled} value="Login" />
                             </div>
                         </form>
                         <p className="text-center mb-2 "><small>New Here? <Link className="btn-link" to='/signup'>Create an account</Link></small></p>

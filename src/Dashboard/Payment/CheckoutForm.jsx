@@ -2,7 +2,6 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import useAuth from "../../hooks/useAuth";
-import './CheckoutForm.css'
 
 const CheckoutForm = ({ cart, price }) => {
     const stripe = useStripe()

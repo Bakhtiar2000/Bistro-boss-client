@@ -24,7 +24,7 @@ const SignUp = () => {
                 updateUserProfile(data.name, data.photo)
                     .then(() => {
                         const savedUser= { name: data.name, email: data.email }
-                        fetch('http://localhost:5000/users', {
+                        fetch('https://bistro-boss-server-bakhtiar2000.vercel.app/users', {
                             method: 'POST',
                             headers:{
                                 'content-type': 'application/json'
@@ -64,7 +64,7 @@ const SignUp = () => {
     return (
         <>
             <Helmet>
-                <title>Bistro Boss | Sign up</title>
+                <title>Hungry Duck | Sign up</title>
             </Helmet>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
